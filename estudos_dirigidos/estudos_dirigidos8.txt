@@ -1,0 +1,99 @@
+1. Diferencie a Lógica Aristotélica, a lógica empregada nas Redes Baysianas, a lógica polivalente e a Lógica Nebulosa.
+
+A lógica Aristotélica um valor pode tem somente um dos dois valores (por vez): verdadeiro ou falso.
+
+A lógica aplicada nas redes Baysianas também é bivalente, mas não é clara se uma preposição é verdadeiro ou falsa, a probabilidade é usada para expressar se uma preposição é verdadeira.
+
+A lógica polivalente uma preposição pode assumir mais de dois valores categóricos.
+
+Na lógica nebulosa, uma preposição pode assumir uma número real de valores entre 0 e 1.
+
+2. Qual a diferença de interpretação de valores considerados sob o ponto de vista da teoria da probabilidade e da lógica polivalente?
+
+Na teoria da probabilidade, um valor é verdadeiro ou falso mas calculamos a possibilidade e na polivalente pode assumir mais de um valor mesmo.
+
+3. O que é "universo do discurso"?
+O universo do discurso são variáveis da lógica fuzzy.
+
+4. O que são variáveis linguíticas?
+São conceitos que podem ter um valor fuzzy.
+
+5. Diferencie os conjuntos nebulosos (fuzzy) dos conjuntos nítidos (crisp).
+Os valores nítidos são valores categóricos, enumeráveis.
+
+6. Dê um exemplo de conjunto nebuloso.
+Os números irracionais.
+
+7. Quais valores que um enunciado pode assumir na lógica nebulosa?
+O conjunto de pessoas altas, a questão fuzzy está no quão alto a pessoa é.
+
+8. Como representamos um conjunto nebuloso em um computador?
+Por uma tupla com nome e valor.
+
+9. Como são definidos os operadores de negação, união, intersecção, para os conjuntos nebulosos?
+Negação = 1 - valor
+União = max(valor1, valor2)
+interseção = min(valor1, valor2)
+
+11. Como os modificadores são normalmente definidos?
+Os modificadores, muito, bastante etc, são geralmente representados por exponenciações.
+
+12. O que é a lógica nebulosa?
+É um método que permite expressar incertezas de maneira mais consistente, através dos conjuntos nebulosos: ao invés de simplesmente pertencer ou não pertencer, um elemento poderá ter vários graus de pertinência a um conjunto.
+
+13. O que significa dizer que a Lógica Nebulosa é não monotônica?
+algo pode ser mais ou menos verdade
+
+14. Como são definidos os conectivos de conjunção, disjunção e negaão para variáveis lógicas nebulosas?
+Negação = 1 - valor
+União = max(valor1, valor2)
+interseção = min(valor1, valor2)
+
+15. Por que nao é possível construir uma tabela verdade completa para os conectivos da lógica nebulosa?
+Como os valores são todos entre 0,1 temos infinitas possibilidades e tabela é infinita.
+
+16. Como o operador condicional é definido na lógica nebulosa?
+A -> B = ~A ou B = MAX ((1 - A), B)
+
+17. O que é a implicação de Godel?
+A → B ≡ (A ≤ B) ∨ B
+
+18. O que sao regras nebulosas?
+Regras do tipo IF A = x then B = y.
+
+19. O que é a "implicação ou (inferência) Mandani"?
+Uma forma alternativa da implicação de Godel
+
+IF pressure on brake pedal is medium
+THEN apply the brake
+
+
+20. Dê um exemplo de como os valores nítidos de entrada podem ser tornados nebulosos (fuzzification).
+Inserindo valores para as variaveis nebulosas.
+
+21. O que é desnebulização (defuzzyfication)?
+Tranformar valores nebulosos em nítidos, threshold. 
+
+22. Quais os passos a serem seguidos na construção e uso de sistemas especialistas nebulosos?
+A criação do sistema especialista difuso envolverá as seguintes etapas:
+1. Obtenha informações de um ou mais especialistas.
+2. Defina os conjuntos fuzzy.
+3. Defina as regras difusas.
+Sistemas especialistas difusos
+
+Para usar o sistema especialista fuzzy, usaremos as seguintes etapas:
+1. Relacione as observações aos conjuntos fuzzy.
+2. Avalie cada caso para todas as regras difusas.
+3. Combine as informações das regras.
+4. Defuzzify os resultados.
+
+23. O que é uma rede neural nebulosa?
+Um sistema neuro-difuso é uma rede neural que aprende a classificar dados usando regras fuzzy e classificações fuzzy (conjuntos fuzzy).
+
+24. Descreva as camadas de uma rede neural nebulosa típica.
+Normalmente, uma rede neural difusa é uma rede feed-forward de cinco camadas. As cinco camadas são as seguintes:
+1 camada de entrada - recebe entradas nítidas
+2 funções de associação de entrada difusa
+3 regras difusas
+4 funções de associação de saída difusa
+5 camada de saída - produz valores nítidos

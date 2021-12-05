@@ -1,0 +1,74 @@
+1 - O que são algoritmos genéticos?
+Os algoritmos genéticos são uma forma de pesquisa local, que fazem mudanças locais para potenciais soluções do problema até que uma solução ótima do problema seja identificada. Utilizam métodos baseados na evolução para fazer pequenas alterações a uma população de cromossomos, numa tentativa de identificar uma solução ótima.
+
+
+2 - Qual a representação utilizada pelos algoritmos genéticos?
+Cadeia de bits
+
+3 - Descreva o significado dos termos: genes, cromossomos, população, genótipo, fenótipo e fitness
+cromossomo = cadeia de bits
+gene = bit
+população = conjunto de cromossomos
+fenótipo = forma física
+genótipo = informação genética
+fitness = função objetivo para ver o quão próximo está da solução ótima
+
+4 - Descreva o processo de execução de um algoritmo genético
+1. Gere uma populçaão aleatória de cromossomos
+2. Se o critério de término foi satisfeito pare, senão continue
+3. Determine o fitness de cada cromossomo
+4. Aplique crossover e mutação para os cromossomos selscionados
+5. Volte para etapa 2
+
+
+5 - O que crossover e como ele é aplicado?
+O cross over é um operador genético utiliazado para combinar informação genética dos pais
+
+6 - Diferencie crossover de um ponto, de dois pontos e crossover uniforme.
+O crossover de um o ponto ocorre em um ponto e o de dois pontos em dois pontos e o uniforme pode ocorreer em todo o cromosso para cada probilidade p.
+
+7 - O que é operador de mutação como é aplicado?
+Operador de mutação é um operador binário que reverte o bit.
+
+8 - Quais os critérios mais comuns para o encerramento da execução de um algoritmo genético?
+Número limite de gerações ou até encontrar uma solução ou um nível máximo de fitness
+
+9 - Descreva, suscintamente, como se pode encontrar o máximo de uma função matemática usando algoritmos genéticos.
+Para encontrar o máximo de uma função matemática que usa algoritmos genéticos usamos a seleção da roleta para aleatoriamente ver quais cromossomos reproduzir
+
+
+10 - O que são "esquemas"? Qual a sua relação com algoritmos genéticos?
+Esquemas são padrões usados para identificar um subconjunto de strings a certas posições.
+
+11 - Qual o efeito da mutação e crossover sobre os esquemas?
+Mais fitness um esquema possui após uma mutação e crossover comparado com a aptidão média da população atual, é mais provável que esse esquema apareça em uma população subsequente de cromossomos. Um esquema cuja adequação é o mesmo que a aptidão média da população provavelmente manterá o mesmo número de ocorrências de uma geração para a próxima. Em contraste, lá haverá menos ocorrências de um determinado esquema, cuja aptidão é inferior ao aptidão média da população e mais ocorrências de um determinado esquema cuja aptidão é superior à média.
+
+12 - O que diz o "teorema dos esquemas", de Holland?
+Esquemas curtos e de baixa ordem que são mais adequados do que a aptidão média da população aparecerá com exponentes regularmente aumentando a regularidade nas gerações subsequentes.
+
+13 - O que são "blocos de construção"? Qual a sua relação com o "teorema dos esquemas"?
+Os blocos de construção são esquemas menores, de orem menor e com maior fitness, eles aõ uma consequência do teorema dos esquemas.
+
+14 - Como devem ser selecionados os bits para representar uma determinada característica?
+A relação com o "teorema dos esquemas" é que os bits devem ser escolhidos em tal forma que eles se agrupam naturalmente em blocos de construção, que algoritmos são projetados para manipular.
+
+15 - O que é "decepção" e como seus efeitos podem ser minimizados?
+Decepção é quando os algoritmos genéticos são enganados por alguns blocos de construção para obter soluções ótimas. Os seus efeitos podem ser minimizados por inversão e por MGAS.
+
+16 - Qual a diferença entre os algoritmos genéticos padrão e os MGAS (Messy Genetic Algorithms)?
+Nos MGA, cada bit é cataologado com a sua posição, algumas posições podem não tem valor ou ter mais de um.
+
+17 - Explique como o "dilema do prisioneiro" pode ser representado por um cromossomo de 67 bits.
+Para o dilema do prisioneiro temos 4 possibilidades: (ajuda ou trai) x (ajuda ou trai)
+Como temos 3 turnos = 4^3 = 64 possibilidades
+e 3 escolhas do jogados
+o que gera 67 cromossomos
+
+18 - Explique porque a falta de diversidade de uma população é um problema.
+A falta de diversidade de uma população é um problema pois as população tendem a estagnar. Depois de um cromossomo atingir uma nota muito alta, os cromossomos piores desaparecem e toda a população tende a ter a mesma estratégia.
+
+19 - O que os cromossomos podem representar em um algoritmo genetico?
+Uma implementação de um algoritmo genético começa com uma população aleatória de cromossomos. Essas estruturas são, então, avaliadas e associadas a uma probabilidade de reprodução de tal forma que as maiores probabilidades são associadas aos  cromossomos que representam uma melhor solução para o problema de otimização do que àqueles que representam uma solução pior. A aptidão da solução é tipicamente definida com relação à população corrente.
+
+20 - Qual o efeito da introdução de predadores e de coevolução no processo evolucionário?
+A introdução de predadores e coevulçao melhora os resultados no processo evolucionário.

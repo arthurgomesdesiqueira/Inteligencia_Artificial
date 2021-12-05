@@ -1,0 +1,205 @@
+Nome: Arthur Gomes de Siqueira
+
+1)
+
+-> Busca em largura.
+O nó de fronteira selecionado é um vizinho não visitado. O teste da meta é aplicado vendo se não existe mais nós a serem visitados. Como o nó raiz e seus sucessores são expandidos em ordem de forma sistemática essa estratégia é completa, a estratégia é ótima, se todos os problema tem o mesmo custo e é completa em espaços de estados finistos acíclicos. A complexidade temporal e espacial são b^(d+1).
+
+-> Busca de custo uniforme.
+A busca de custo uniforme, assim como o BFS, possui como nó de fronteira vizinhos não vizitados, a diferença é que lidamos com pesos e atualizamos com isso um nó pode ter seu valor atualizado mais de uma vez. O teste da meta também é aplicado vendo se não existe mais nós a serem visitados. Essa estratégia tambem como visita sistematicamente todos os nós é completa, mas também não é ótima, pois pode-se ver os custos e depois no final ver um caminho menor com mais arestas mas com soma menor de pesos. A complexidade temporal e espacial quando todos os custos são iguais é b^(d+1).
+
+-> Busca em profundidade.
+Na busca em profundidade sempre expande para o nó mais profundo primeiro. O teste de meta, portanto, é aplicado vendo se já percorreu o mais fundo possível. Essa estratégia não é completa, pois pode ficar preso em ciclos e não é ótima, pois o algoritmo retorna a primeira solução encontrada mesmo se não é a mais barata. A complexidade temporal do DFS é O(b^m). A complexidade espacial é O(bm), em que b é o número de ramificação e m a profundidade da árvore.
+
+-> Busca em profundidade limitada.
+Na busca em profundidade limite também expande para o nó mais profundo primeiro, mas com uma limitação de profundidade L dada, tratando assim todos os nós com profundidade L como se não houvessem sucessores. Assim como DFS, o teste de meta é aplicado vendo se já percorreu o mais fundo possível. Essa estratégia não é ótima também e para ser completa depende da escolha de L. A complexidade temporal do DFS é O(b^L) e a complexidade espacial é O(b*L).
+
+-> Busca de aprofundamento iterativo.
+A busca em em profundidade limite também expande para o nó mais profundo primeiro, mas iterando o valor de L de profudidade. Assim como DFS, o teste de meta é aplicado vendo se já percorreu o mais fundo possível. A complexidade temporal é O(b^d) onde d é a profundidade da solução mais rasa e a de memória é O(bd). Como o BFS, a estratégia é ótima, se todos os problema tem o memsmo custo e é completa em espaços de estados finistos acíclicos.
+
+-> Busca bidirecional.
+A busca bidirecional os nós de fronteiras são os vizinhos do estado inicial e os vizinhos dos estados finais. O teste de meta, portanto, é aplicado vendo quando se percorre o mais fund possível do início e do vizinho.
+
+2)
+
+Considere a árvore T abaixo, com o nó inicial a e o nó de meta e.
+         a
+       /   \
+      b     c
+     /       \
+    d         e
+   /           \
+  f             g
+
+
+-> Busca em largura
+
+1)  a
+
+2)   a
+   /   \
+  b     c
+
+3)   a
+   /   \
+  b     c
+ /       \
+d         e
+
+-> Busca de custo uniforme
+
+1)  a
+
+2)   a
+   /   \
+  b     c
+
+3)   a
+   /   \
+  b     c
+ /       \
+d         e 
+
+
+-> Busca em profundidade
+
+1)  a
+
+2)   a
+   /
+  b
+
+3)    a
+     /
+    b
+   /
+  d
+
+
+4)    a
+     /
+    b
+   /
+  d
+ /
+f
+
+5)    a
+     /
+    b
+   /
+  d
+ /
+f
+
+
+6)     a
+     /  \
+    b    c
+   /
+  d
+ /
+f 
+
+7)     a
+     /   \
+    b     c
+   /       \
+  d         e
+ /           
+f
+
+
+
+-> Busca em profundidade limitada
+Sendo l = 3 teríamos
+1)  a
+
+2)   a
+   /
+  b
+
+3)    a
+     /
+    b
+   /
+  d 
+
+
+4)     a
+     /  \
+    b    c
+   /
+  d
+ 
+
+6)     a
+     /   \
+    b     c
+   /       \
+  d         e
+
+-> Busca de aprofundamento iterativo
+Com l = 3 teríamos: 
+
+- l = 1
+1)  a
+
+- l = 2
+1)  a
+
+2)   a
+   /
+  b
+
+3)     a
+     /  \
+    b    c
+
+
+- l = 3
+
+1)  a
+
+2)   a
+   /
+  b
+
+3)    a
+     /
+    b
+   /
+  d 
+
+
+4)     a
+     /  \
+    b    c
+   /
+  d
+ 
+
+6)     a
+     /   \
+    b     c
+   /       \
+  d         e
+
+
+-> Busca bidirecional
+
+1)
+a       e
+
+2)
+  a     c
+ /       \
+b         e
+
+3)
+   a
+  / \
+ b   c
+ /    \
+d      e
+

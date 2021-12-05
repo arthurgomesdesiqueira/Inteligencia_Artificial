@@ -1,0 +1,90 @@
+1. Que estratégia as árvores de decisão usam para resolver um problema? Como é essa estratégia?
+Uma árvore de decisão usa a estrategia de dividir para conquistar para resolver um problema de decisão. Um problema complexo é dividido em problemas mais simples, aos quais recusivamente é aplicada a mesma estratégia.
+
+
+2. Defina "árvore de decisão".
+Formalmente, uma árvore de decisão é um grafo acíclico direcionado em que nó é um nó de divisão ou um nó folha. O nó folha contém um teste condicional baseado em valores do atributo e o nó folha é rotulado com uma função.
+
+
+3. Explique a relação entre as árvores de decisão e as Formas Normais Disjuntivas (FND).
+As Formas Normais Disjuntivas (FND) são expressões da seguinte maneira:
+    (a ^ ... ^ b) v .. v (c ^ ...^ d)
+Isso significa que temos "OR" externos e "AND" internos. Isso se assemelha a uma arvore de decisão pois cada preposição ligada por "OR" representa um caminho completo feito na árvore (uma possibilidade de resposta) e cada "AND" interno um nó escolhido no caminho.
+
+4. O que significa "induzir uma árvore de decisão"? Descreva como isso pode ser feito.
+Induzir uma árvore de decisão significa construí-la.  Isso pode ser feito, de maneira geral, adotando uma regra de divisão a partir de um conjunto de dados D e recursivamente geraremos a árvore.
+
+5. O que é uma regra de uma divisão?
+Uma regra de divisão indica o quão bem um dado discrimina as classes, ou seja, nos auxilia na descoberta do nó de divisão.
+
+6. O que é a impureza de um nó?
+A impureza de um nó t é uma função sobre a proporção naquele nó i(t) = phi(p_1, p_2, .., p_k). Quando este índice é igual a zero, o nó é puro. Por outro lado, quando ele se aproxima do valor um, o nó é impuro (aumenta o número de classes uniformemente distribuídas neste nó). 
+
+7. Descreva o que são as funções de mérito.
+As funções de mérito serão responsáveis pela divisão dos dados em classes diferentes pelo ponto de mérito.
+
+
+8. O que é ganho de informação?
+Para cada atributo, o ganho informação mede a redução da entropia nas partições obtidas de acordo com o valor do atributo.
+
+
+9. O que é entropia de uma variável aletória?
+Uma entropia de uma variável aleatória é quantidade de possibilidades que elas possam assumir.
+
+10. Como a entropia é usada no contexto de árvores de decisão?
+A entropia afeta diretamente no conjunto de possibilidades, isto é, no tamanho da árvore de decisão, no seu número de nós e fator de ramificação. A construção de uma árvore é guiada pelo objetivo de reduzir a entropia.
+
+11. Na construção de uma árvore de decisão, como escolher o atributo que melhor descrimina as classes.
+O atributor que melhor descrimina as classes, em uma árvore de decisão é aquele que resulta no ganho máximo de informação.
+
+12. Como calcular o ganho de informação para um atributo contínuo?
+O ganho de informação para um atributo contínuo é realizar uma partição binária (usando um valor como pivô).
+
+
+13. Qual a importância de se podar uma árvore de decisão? Qual o efeito dessa poda?
+Ao se podar uma árvore de decisão eliminamos as remificações com baixa probabilidade e com isso, podemos melhorar a acurária do modelo.
+
+14. O que é uma pré-poda?
+Pré-poda conta com regras de parada que previnem a construção dos ramos que não parecem melhorar a precisão da árvore.
+
+15. O que é uma pós-poda?
+Na pós-poda, uma árvore é gerada para depois ser podada.
+
+16. Como tratar valores desconhecidos nos conjuntos de dados?
+As estratégias mais comuns para tratar valores desconhecidos nos conjuntos de dados são:
+
+- trocar o valor desconhecido pelo valor mais comum no conjunto de treinamento
+- considerar o calor desconhecido como outro valor possível de atributo
+- estimar as probabilidades do valores
+- lista de atributos alternativos
+
+17. Discuta as vantagens de se usar uma árvore de decisão.
+As vantagens de uma árvore de decisão são: 
+flexibilidade, pois não assumem nenhuma distribuição para os dados; 
+robustez, pois são invariantes a transformações monótonas na entrada; 
+seleção de atributos; 
+interpretabilidade; 
+eficiência.
+
+18. Quais os problemas conhecidos associados às árvores de decisão?
+Os problemas conhecidos associados às árvores de decisão são replicação, valores ausentes, atributos contínuos e instabilidade.
+
+
+19. O que é uma "regra de decisão"?
+Uma regra de decisão é uma implicação da forma: se A então B.
+
+20. Quais as vantagens de se usar regras de decisão em vez de árvores de decisão?
+A vantagens de se usar regras de decisão em vez de árvore de decisão são, pelo fato de serem modulares, podendo portanto serem interpretadas isoladamente.
+
+
+21. Como reescrever uma árvore de decisão na forma de conjunto de regras?
+Penso que para reescrever uma árvore de decisão como conjunto de regras precisamente seria percorrer todas as possibilidades da raiz até a folha e remover as repetições.
+
+22. Descreva o processo de aprendizado de regras usando o Algoritmo de Cobertura
+O algoritmo de Cobertura consiste em aprender uma regra para uma das classes, removendo o conjunto de exemplos cobertos pela regra e repetir o processo. O processo termina quando só há exemplos de uma única classe.
+
+23. Descreva o algoritmo bottom-up para busca de regras.
+O algoritmo bottom-up para busca de regras se inicia pela regra mais específica e aplica operadores de generalização, removendo restrições.
+
+24. Descreva o algoritmo top-down para busca de regras.
+O algoritmo top-down para a busca de regras inicia a busca da regra mais geral e aplica operadores de especificação, acrescentando condições à parte condicional da regra.

@@ -1,0 +1,67 @@
+Nome: Arthur Gomes de Siqueira
+
+
+1) Planejamento é o processo de tomar decisões sobre o futuro. Planejar significa interpretar a missão organizacional e estabelecer os objetivos da organização, bem como os meios necessários para a realização desses objetivos com o máximo de eficácia e eficiência. O plano seria Um esquema, programa ou método contruído de antemão para realizar um objetivo (meta)
+
+2) O planejamento ele pode ser construido de varias formas mas a maioria delas sempre segue um objetivo e voce vai construindo o plano de acordo com aquele objetivo, construindo metas, pre-requisitos para alcançar os objetivos e dai criar seu objetivo principal. Planejamento adequado é o planejamento que consegue abranger tudo do objetivo, pontos fortes e fracos, reconhecer erros que precisam ser resolvidos, coerente com a realidade, objetivos bem definidos e planejados
+
+3) - Fator de ramificação grande
+- A função heurística apenas escolhe o estado mais próximo do objetivo. Não permite descartar ações a priori
+- Não permite abstração dos estados parciais
+- Considera ações a partir do estado inicial, uma após a outra
+- Objetivo é testado para cada estado; para cada novo estado, um novo teste idêntico precisa ser feito
+
+4) É o calculo de todas as situaçoes e cenarios possiveis que pode acontecer e que devem ser calculadas e entendidas
+
+5) Axiomas de efeito: descrevem as propriedades do mundo que mudam após uma ação 
+Axiomas de quadro: descrevem as propriedades do mundo que não mudam após uma ação
+Axioma estado-sucessor: combinação entre os axiomas de efeito e de quadro
+
+6) Porque ele consegue juntar os Axiomas de efeito e Axiomas de quadro e podemos saber tudo que acontece de mudança quando acontece uma ação e quando nao acontece.
+
+7) Método de Análise de Meios e Fins: À medida que um operador é aplicado a um objeto para reduzir as diferenças existentes entre ele e a meta, novas submetas serão geradas, sendo que estas últimas, uma vez realizadas, podem conduzir à resolução do problema original. Este método de resolver um problema subdividindo-o em problemas mais simples - através da constante comparação entre aquilo que se dispõe e a meta desejada.
+
+8) Tecnifcas de Busca são resolvidos de forma bruta onde nao consegue separar o problema em varias partes sem falar que ele tenta resolver todo o problema de uma vez, enquanto a analise de meios e fins tenta resolver o problema dividindo-o em varios subproblemas para facilitar a resolução e resolvendo esses subproblemas conseguimos resolver o problema principal.
+
+9) Se conseguimos representar os problemas dessa forma, o planejamento se torna um forte meio para resolver: 
+- Representações dos estados, objetivos e ações usando LPO (descrições parciais dos estados)
+- Adiciona ações ao plano quando forem necessárias
+- Uso da estratégia de dividir-e-conquistar
+
+10) STRIPS é uma linguagem formal derivada da lógica de primeira ordem usada para decompor problemas de planejamento automático em condições lógicas. Uma ação STRIPS é aplicável (ou permitida) em um estado quando suas pré-condições estão contidas no estado
+
+11) Operadores: Pre(o) especifica os átomos que devem ser verdadeiros para o ser aplicável, Add(o) especifica os átomos que passam a ser verdadeiros após a execução de o e Del(o) especifica os átomos que passam a ser falsos após a execução de o.
+
+12) Algoritmo STRIPS consegue a representação de problemas de planejamento − estados, ações e objetivos − consegue ser feita por meio de uma linguagem que seja suficientemente expressiva para descrever uma ampla variedade de problemas, mas restrita o bastante para permitir que algoritmos eficientes operem sobre ela. São baseadas em lógica para descrever estados, ações e para definir e computar facilmente o próximo estado. A linguagem básica para representação adotada por planejadores clássicos.
+
+13) Ele simplesmente pesquisa no espaço de planos possíveis até encontrar um adequado. Isso envolverá a construção de uma árvore onde o nó raiz representa o estado inicial e outros nós representam outros estados possíveis que podem ser obtidos aplicando-se os operadores.
+
+14) 
+
+15) Os planos de ordem total ditam a ordem em que cada ação deve ser executada. Em alguns casos, um plano de pedido parcial pode ser usado, no qual as ações que são dependentes umas das outras são ordenadas em relação umas às outras, mas não necessariamente em relação a outras ações independentes.
+
+16) Ao construir um plano de pedido parcial, há um problema potencial a ser considerado, que é que uma ação pode desfazer os efeitos de outra ação, caso em que a ordem em que essas ações são realizadas pode ser importante. Uma ligação causal é considerada protegida quando é necessário estabelecer as pré-condições de um operador abaixo dela no plano. Se outro operador tiver o efeito de excluir alguma parte necessária dessa pré-condição, o link protegido é considerado ameaçado por esse segundo operador, desta forma, é possível evitar este problema.
+
+17) O princípio do comprometimento mínimo significa que o menor número possível de variáveis é instanciado na produção de um plano. Dessa forma, o planejador trabalha com um plano preciso e funcional, mas o faz da maneira mais eficiente possível.
+
+18) Um gráfico de planejamento consiste em vários níveis, cada nível de numeração par no plano representa um estado e cada nível de numeração ímpar representa ações. O estado final no gráfico representa o estado da meta. Um gráfico de planejamento pode ser usado para desenvolver planos para problemas que podem ser representados usando a lógica proposicional. 
+
+19) Ele reduz significativamente o número de ações que devem ser consideradas na construção de um plano, devido a ser uma forma de representação muito compacta, mostrando apenas as ações possíveis em cada estado.
+
+20) 
+
+21) É útil ser capaz de mostrar quais proposições não mudam como resultado de uma dada ação. Eles são mostrados por ações de persistência, que são equivalentes aos axiomas do quadro. Uma ação de persistência é normalmente mostrada em um gráfico de planejamento como uma seta com uma caixa desmarcada.
+
+22) Se alguma das proposições literais incluídas na definição do estado de meta não estiver incluída no nível do gráfico de planejamento, então não é possível formular um plano para atingir o estado de meta. Por outro lado, se todas as proposições de metas forem incluídas no nível final, então pode ser possível formular um plano adequado. Isso vai depender dos mutexes no nível final, que restringem quais estados podem ser alcançados.
+
+23) Uma característica final dos gráficos de planejamento é a inclusão de informações de exclusão mútua ou mutexes. Um mutex existe entre dois efeitos ou ações que são mutuamente exclusivos. Ocorre porque duas afirmações não podem ser verdadeiras ao mesmo tempo. Em cada nível do gráfico de planejamento, linhas são traçadas entre ações ou proposições que são mutuamente exclusivas entre si.
+
+24) ADL é uma linguagem mais expressiva do que STRIPS, que pode ser usada para representar uma série de problemas que não podem ser adequadamente representados em STRIPS. Ao contrário de STRIPS, que só pode representar expressões não quantificadas, como A ∧ B, os objetivos em ADL podem ser quantificados, permitindo expressões como ∃x. P(x) ∧ ¬ Q(x). As pré-condições em STRIPS devem ser expressas como conjunções, mas as pré-condições em ADL podem ser expressas como disjunções. Além disso, o ADL permite efeitos condicionais, que indicam os efeitos que ocorrerão como resultado da realização de uma determinada ação, dependendo de certas condições.
+
+25) Um princípio frequentemente aplicado é o monitoramento da execução. Depois que um planejador produziu um plano, digamos para um robô, geralmente se espera que esse robô simplesmente execute ou execute o plano. Um planejador que usa o monitoramento de execução verifica as pré-condições de cada ação à medida que a executa. Se as pré-condições não forem mais atendidas, porque algo mudou, então o planejador pode precisar começar novamente e elaborar um novo plano. Um método alternativo para lidar com ambientes dinâmicos, ou incertezas, é usar o planejamento condicional. Esta abordagem envolve o desenvolvimento de um plano que cobre todas as eventualidades possíveis.
+
+26) Planejadores probabilísticos foram desenvolvidos com o objetivo de lidar com a incerteza de que não realista para muitas situações de planejamento do mundo real, considerar que as ações são sempre determinísticas. Em alguns sistemas, é possível considerar ações não determinísticas, onde uma ação aplicada em um estado particular levará de forma não determinística a um dos vários estados possíveis.
+
+
+
+

@@ -1,0 +1,54 @@
+Nome: Arthur Gomes de Siqueira
+
+1) Representações atômicas de estados são representações em que cada estado é indivísel, não pode ser quebrado em estruturas menores.
+
+2) A formulação de objetivo baseado na situação atual e na medida de desempenho do agente, buscar a resolução do problema. São considerados os objetivos e ações.
+
+3) A formulação de problema é o processo de decidir que ações e estados devem ser considerados, dado um objetivo.
+
+4) O ambiente observável é aquele em que o agente pode ver o estado completo do ambiente em cada momento. 
+O ambiente é discreto se os seus  estados assumem valores discretos. 
+O ambiente é conhecido se o agente sabe do funcionamento do seu ambiente. 
+O ambiente determinístico é aquele em que o próximo estado do ambiente é completamente determinado pelo estado atual.
+
+5) A solução de um problema é aquele em que o agente sabe o funcionamento da situação para resolver o problema, a resolução envolve valores discretos e o processo de resolução é determinístico.
+
+6) O processo de busca procura pela melhor seqüência, ele seria um agente com várias opções imediatas podendo decidir o que fazer comparando diferentes seqüências de ações possíveis. As entradas poderiam ser qualquer tipo de busca que ele esteja procurando e a saida seria a busca mais favoravel e adequada nesse contexto.
+
+7) O espaço de estados é o conjunto de todos os estados acessíveis a partir de um estado inicial. O caminho no espaço de estados que leva do estado inicial a um dos estados meta no espaço de estados do problema.
+
+8) Modelo de transição é uma descrição do que cada ação faz.
+
+9) Custo de um caminho é atribuir custo numérico a cada caminho no grafo. 
+
+10) O problema pode ser definido de varias formas diferentes dependendo muito do que está sendo formulado, pensado, quais os objetivos que queremos alcançar, os conjuntos de estados atômicos com estado inicial e finais e ações/trasições que transformam esses estados. 
+
+11) Uma solução para um problema seria a resposta para um problema, uma solução que passa todos os critérios do problema. Uma solução é otima quando respeita todos os criterios establecidos pelo problema e é a mais rápida e melhor possível.
+
+12) Processo de abstração é o processo de remoção de datalhes da representação de algo. Uma abstração é válida se a partir dela podemos elaborar uma solução abstrata para a solução real. A abstração é útil se cada ação abstrata é mais fácil de executar que o problema original.
+
+13) A escolha de uma boa abstração envolve remover o máximo de detalhes possível, mantendo a validade e assegurando que o resumo das acões são fáceis de realizar.
+
+14) Uma árvore de busca é uma árvore utilizada para a localização de chaves específicas dentro de um conjunto.
+
+15) Um nó corresponde um estado no espaço des espaços. Um estado descreve uma situação atômica possível. Um nó folha representa um que não possui filhos. Caminho é um conjunto de nós adjacentes. Borda ou fronteira separa os nós já visitados para os não visitados.
+
+16) O processo de busca por soluções de problemas em árvores de busca envolve a partir do nó raiz percorrendo o caminho até tentar os nós de solução, muitas vezes com menor peso possível ou com caminho mais curto.
+
+17) Em cada nó de uma árvore de busca deve ser armazenada os nós filhos que seria o nó seguinte e um valor dentro do nó.
+
+18) Um priority queue é a mais adequada para implementar uma fonteira pois além de ser rápida, armazena a lista de vizinhos com a prioridade.
+
+19) Um conjunto pode ser usado para controlar o estados repertidos ou uma lista se quiser fazer backtracking.
+
+20) Os quatro aspectos para avaliar o desempenho de algoritmos de buscas são: completude, se o algoritmo consegue sempre detectar a solução quando e informar que não tem quando não tem; custo ótimo, a solução encontrada possui o caminho mais curto; complexidade de tempo, tempo que leva encontrar a solução dado o tamanho da entrada, em que muitas vezes é o tamanho; e complexidade de espaço, o quanto de memória gasta o algoritmo.
+
+21) A profundidade de um nó é a distância entre um nó e a raiz.
+
+22) O fato de ramificação de uma árvore é o número máximo de filhos que um nó pode possuir.
+
+23) O custo de busca é o tamanho do caminho feito para encontrar um nó. O custo total de busca também leva em consideração estruturas auxiliares e é exato.
+
+24) O que diferencia das estratégias de busca é a forma para a escolha do caminho.
+
+

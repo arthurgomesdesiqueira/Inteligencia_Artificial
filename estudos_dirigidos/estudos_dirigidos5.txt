@@ -1,0 +1,88 @@
+1) Como a Teoria da Probabilidade pode ser usada no tratamento de incertezas?
+No caso de incertezas, a probabilidade nos dá uma noção entre 0 e 1 de um evento ocorrer, em que 0 é nunca irá e 1 sempre irá. 
+
+2. O que é distribuição de Probabilidades Combinadas?
+A distribuição de Probabilidades Combinadas pode ser usada representar a probabilidade de combinar eventos.
+
+3.
+P(A) = 0,72
+P(B) = 0,20
+P(A e B) = 0,11
+p(A e ~B) = 0,63
+P(A ou B) = 0,83
+
+4. O que é probabilidade a priori?
+A teoria P(A) do evento inicial do Teorema de Bayes é a probablidade a priori.
+
+5. O que é propabilidade a posteriori?
+A teoria P(B) do segundo evento do Teorema de Bayes é a probablidade a posteriori.
+
+6. O que é probabiilidade condicional?
+Probabilidade condicional eé a probabilidade de B dado que um evento A ocorreu.
+
+7. O que diz o Teorema de Bayes?
+O teorema de Bayes nos permite calcular a probabilidade condicional em termos de P(A), P(B) e P(A|B)
+
+8. Deduza a equação que expressa o Teorema de Bayes, a partir da Regra do Produto.
+P(A e B) = P(A|B)P(B)
+P(B|A)P(A) = P(A|B)P(B)
+p(B|A) = P(A|B)P(B)/P(A)
+
+9. Extenda o Teorema de Bayes para Trabalhar com mais de duas variáveis.
+P(H|E1,...,En) = P(E1,...,En|H)*P(H)/P(E1,...,En)
+
+10. Qual é o efeito sobre esse teorema se as n partes da evidência forem indenpendentes entre si.
+P(H|E1,...,En) = P(E1|H)*...*P(En|H)*P(H)/P(E1,...,En)
+
+11. Dada duas hipóteses B e C, como calcular a probabilidade relativa entre elas?
+P(B|A)/P(C|A) = P(A|B)*P(B)/(P(A|C)*P(C))
+
+
+12. O que é normalização de probabilidades?
+Normalização de probabilidades é o processo em que as probabilidades posteriores de um par de variáveis são divididas por um valor fixo para garantir que elas somadas até 1.
+
+13. Como calcular uma probabilidade condicional, usando uma constante de normalização?
+P(B|A) = alpha * P(A|B) * P(B)
+α = 1/(P(A|B)*P(B)+P(A|~B)*P(~B))
+
+14. Como um sistema pode decidir que ação tomar, identificando a hipótese mais provável (dentro de um conjunto de n possibilidades)?
+Dado um conjunto de provas, o aprendente pode determinar qual a hipótese acreditar, identificando a probabilidade posterior de cada.
+
+
+15. O que significa dizer que dois eventos são independentes?
+Que um evento não interfere na probabilidade de outro ocorrer,  P(A|B) = P(A) e P(B|A) = P(B).
+
+16. Como pode ser calculada a probabilidade de dois eventos independentes acontecerem simultanemente?
+P(A)*P(B)
+
+17. O que é uma Rede Baysiana de Crenças?
+Uma Rede Baysiana de Crenças é gráfico acíclico dirigido, onde os nós do gráfico representam provas ou hipóteses, e onde um arco que liga
+dois nós representa uma dependência entre esses dois nós.
+
+
+18. Como a probabilidade combinada de um conjunto de variáveis pode ser calculada a partir de uma Rede Baysiana de Crenças?
+A partir de uma rede Baysiana de Crenças sabemos quais eventos são dependentes e quais não são.
+
+19. Qual deve ser a ordem correta a ser considerada para a inserção de nós em uma Rede Baysiana?
+Colocar primeiro os eventos mais independentes.
+
+20. O que é o classificador Baysiano Ótimo? Como ele é usado?
+O classificador Baysiano Ótimo usa como função objetivo a probabilidade de uma classificação dado o conjunto de hipóteses e utiliza as probabilidades posteriori.
+
+21. Qual a diferença entre o Classificador Baysiano Ótimo e o Classificador Baysiano Ingênuo (naive)?
+O Classificador Baysiano Ingênuo assume que as variáveis são independentes e é apenas um simples sistema de classificação
+
+22. O que é uma estimativa-m?
+A estimativa-m é usada para calcular a probabilidade de um determinado valor de atributo com uma classificação:
+
+P(x=1|C) = (a + m*p)/(b+m)
+ 
+a = o número de exemplos de treino que encaixam na nossa probabilidade
+b = o número de exemplos de treino classificados como C
+p = uma estimativa da probabilidade de que estamos a tentar obter
+
+23. O que é uma filtragem colaborativa? Como ela pode ser implementada usando redes Bayesianas?
+A filtragem colaborativa é uma técnica que é cada vez mais utilizada por lojas online (como a Amazon.com) para fornecer sugestões plausíveis aos clientes com base nas suas compras anteriores. A ideia por detrás da filtragem colaborativa
+pode ser dito muito simplesmente: se soubermos que tanto a Anne como o Bob gostam dos itens A, B, e C, e que Anne gosta de D, então é razoável supor que Bob também gostaria de D.
+
+P(Bob Likes Z | Bob likes A, Bob likes B, . . ., Bob Likes Y)

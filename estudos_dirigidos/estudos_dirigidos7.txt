@@ -1,0 +1,189 @@
+1. Descreva o fundamento natural para as redes neurais artificiais.
+As redes neurais artificiais tiveram como fundamento o sistema nervoso humano, composto por uma rede de neurônios que funcionam como combinações de funções.
+
+2. O que são "unidades lógicas com limiar"?
+Unidades lógicas limiar (LTU) são neurônios artificais como capacidades de funções lógicas simples e cada um executar uma função diferente.
+
+3. Quais os principais componentes e como funciona a unidade fundamental do sistema nervoso dos animais?
+A unidade fundamental do sistema nervoso é o neurônio, que permite a responder por estímulos internos e externos, transmitindo o impulso nervoso a outros neurônios e células. Os principais componentes do neuronio são dentritos, corpo celular e axônio.
+
+Os dendritos são prolongamentos dos neurônios que recebem estímulos nervosos de outros neurônios ou do ambiente. Esses estímulos são transmitidos para o corpo celular, que coleta as informações recebidas dos dendritos, as combina e processa. Dependendo da intensidade e frequência dos estímulos recebidos, o corpo celular gera um novo impulso, que é enviado para o axônio, que conduz os impulsos elétricos produzidos no corpo celular até outro local mais distante (e até outros
+neurônios).
+
+4. O que são as sinapses?
+As sinapses formam o contato entre neurônios distintos, formando as unidades que medeiam as interações entre neurônios e podem ser excitatórias ou inibidoras. 
+
+5. Compare a velocidade e eficiência na realização de tarefas entre o cérebro e os computadores digitais.
+O cérebro humano possui um bilhões de neurônios, eles estão em 1000 módulos principais, cada um com 500 redes neurais que trabalham de forma paralela, permitindo uma grande rapidez de processamento. 
+Isso é percebido quando apesar de os neurônios biológicos possuírem um tempo de execução normalmente da ordem de 10^3 segundos, o cérebro é capaz de realizar diversas tarefas (como reconhecimento de padrões, percepção e controle motor) várias vezes mais rapidamente que o mais rapido computador digital existente na atualidade.
+
+
+6. O que são as "redes neurais artificiais"?
+As "redes neurais artificiais" são sistemas computacionais com unidades de processrmento simples densamente interconectadas, neurônios artificiais, que computam funções matemáticas.
+
+7. O que é a arquitetura de uma rede neural artificial?
+Em uma RNA, os neurônios podem estar em mais de uma camada. Quado mais de uma camada for utilizada, um neurônio pode receber em seus terminais de entrada valores de saída de neurônios da camada anterior e/ou enviar seu valor de saída para terminais de entrada de neurônios da camada seguinte.
+
+8. O que é o aprendizado de uma rede neural artificial?
+O aprendizado em uma rede neural artificial é feito pelo treino de ajuste de parâmetros do RNA, definição dos valores dos pesos às conexões da rede que fazem com que o modelo obtenha melhor desempenho, geralmente medido pela acurácia preditiva.
+
+
+9. Como funciona um neurônio artificial?
+Cada terminal de entrada de neurônio artificial, recebe um valor, simulando dentritos. Essas conexões de entrada negativas (w < 0) ou positivas (w > 0). Um valor de peso igual a zero equivale a ausência da conexão associada. Os valores recebidos são pesados por meio de uma função f, simulando o corpo celular. A saída da função é a resposta do neurônio para a entrada. 
+
+10. Para que servem as funções de ativação? Quais as funções são comumente utilizadas nas RNAs?
+As funções de ativação decidem se um neurônio deve ser ativado ou não: recebem os pesos de entradas, representados pelos estímulos dos neurôniose decidem a saída de retorno.
+
+As funções comumente utilizadas da forma RNAs são linear, limiar e sigmoidal.
+
+11. O que são RNAs multicamadas? Como estas redes podem ser classificadas, em função dos padrões de conexão entre os neurônios?
+RNAs multicamadas são RNAs que possuem mais de uma camada. Essas redes podem ser classificadas em:
+- Completamente conectada: quando os neurônios da rede estão conectados a todos os neurônios da camada adjacente.
+- Parcialmente conectada: quando os neurônios estão conectados a apenas alguns dos neurônios da camada adjacente.
+- Localmente conectada: são redes parcialmente conectadas, em que os neurônios conectados a um neurônio se encontram em uma região bem delinida.
+
+12. O que são conexões de retroalimentação (feedback)? Como são denominadas as redes que contém esse tipo de conexão?
+As conexões de retroalimentação (feedback) são as conexões que permitem que um neurônio receba em seus terminais de entrada a saída de um neurônio da mesma camada ou de uma camada posterior. As redes que contém esse tipo de conexão são redes recorrentes.
+
+13. Onde podem ser aplicadas as redes recorrentes?
+As redes recorrentes pode ser aplicadas aplicações quando é necessário processar informações sequenciais e na simulação de sistemas dinâmicos. Como processamento de língua natural e o controle de braços robóticos.
+
+14. Quais os elementos que definem a topologia de uma RNA?
+O número de camadas, o número de neurônios em cada camada, o grau de conectividade e a presença ou não de conexões de retropropagação definem a topologia de uma RNA.
+
+15. Descreva os princípios dos principais algoritmo de treinamento das RNAs.
+
+O algoritmos de treinamento podem ser dividos em quatro grupos:
+
+1. Correção de erro: supervisionado para ajustar os pesos da RNA de forma a reduzir os erros cometidos pela rede.
+
+2. Hebbiano: não supervisionado, baseados
+na regra de Hebb, que diz que, se dois neurônios estão simultaneamente ativos a conexão entre eles deve ser reforçada.
+
+3. Competitivo: não supervisionado, competição entre neurônios para definir qual ou quais devem ter seus pesos ajustados.
+
+4. Termodinâmico (Boltzmann), algoritmos estocásticos baseados em princípios observados na metalurgia.
+
+16. O que é uma rede perceptron? Como ela é treinada?
+A rede Perceptron usa o modelo de McCulloch-Pitts como neurônio, foi a pineira no processo de treinamento de RNAs. A rede Perceptron possui uma máscara para receber a entrada, que era pré-processados e então, eram encaminhada à rede que possui apenas um neurônio.
+
+A rede preceptron é treinada por um algoritmo supervisionado de correção de erros que usa a função de ativação do tipo limiar. Durante o seu treinamento, para um objeto os pesos são ajustados:
+    w_j(t+1) = w_j(t) + n*x_i^j(y_i-f(x_i))
+
+- w_j(t) = peso da j-ésima conexão de entreada
+           no tempo t
+- n = constante de taxa de aprenzado
+- x_i^j = j-ésimo valor do atributo de entrada x_i
+- y_i = é o rótulo de x_i (saída desejada da rede)
+- f(x_i) = saida pela rede no tempo t
+
+A rede é treinada da seguinte forma, estima o erro, se sim: ajusta usando a fórmula acima. 
+
+17. Qual o efeito da taxa de aprendizado sobre o ajustes dos pesos?
+
+A taxa de aprendizado define a magnitude do ajuste feito no valor de cada peso. Valores altos fazem com que as variações sejam grandes enquanto taxas pequenas implicam poucas variações nos pesos. Essa magnitude vai definir a velocidade de convergência da rede.
+
+18. Descreva o algoritmo de treinamento de uma rede perceptron.
+A rede preceptron é treinada por um algoritmo supervisionado de correção de erros que usa a função de ativação do tipo limiar. Durante o seu treinamento, para um objeto os pesos são ajustados:
+    w_j(t+1) = w_j(t) + n*x_i^j(y_i-f(x_i))
+
+- w_j(t) = peso da j-ésima conexão de entreada
+           no tempo t
+- n = constante de taxa de aprenzado
+- x_i^j = j-ésimo valor do atributo de entrada x_i
+- y_i = é o rótulo de x_i (saída desejada da rede)
+- f(x_i) = saida pela rede no tempo t
+
+A rede é treinada da seguinte forma, estima o erro, se sim: ajusta usando a fórmula acima.
+
+19. O que diz o teorema de convergência de uma rede perceptron?
+O teorema de convergência de uma rede perceptron diz que é possível classificar um conjunto de entradas linearmente, uma rede perceptron fará a classificação.
+
+20. Diferencie as redes perceptron e adeline.
+A principal diferença entre perceptron e adeline é que a rede adaline usa uma função de ativação linear e, assim, leva a magnitude do erro em consideração na hora de ajustar os pesos da rede.
+
+
+21. Em que tipos de problemas são comumente aplicadas as redes perceptron e adeline?
+As redes adeline são comumente aplicadas em problemas supervisionados de regressão. Em problemas de classificação, as saídas dos neurônios devem ser discretizadas. As redes perceptron, por sua vez, são utilizadas para a solução de problemas de classicação.
+
+22. Qual a principal limitação das redes de uma camada?
+A principal limitação das redes de uma camada, como as redes perceptron e adaline, é que elas conseguem classicar apenas objetos que são linearmente separaveis.
+
+23. O que são classes linearmente separáveis?
+Classes linearmente separáveis são classes que possuem um hiperplano que separe os dados das duas classes.
+
+24. Como resolver problemas não linearmente separáveis usando RNAs?
+Para resolver problemas não linearmente separáveis usando RNAs, a alternativa mais utilizada é adicionar uma ou mais camadas intermediária.
+
+25. Que funções de ativação são utilizadas nas camadas intermediárias de uma MLP? Por quê?
+Funções não lineares, como sigmoidal, são utilizadas nas camadas intermediárias de uma MLP para conseguir separar classes não-linearmente separáveis.
+
+26. Como ocorre o processamento ao longo das camadas de neurônios?
+Quando o processamento avança de uma camada para a seguinte, o processamento (e a função correspondente) se torna mais complexo. Na primeira camada, cada neurônio aprende uma função que define um hiperplano o qual divide o espaço de entrada em duas partes. Cada neurônio da próxima camada combina um grupo de hiperplanos de unidos pelos neurônios da camada anterior, formando regiões convexas. Os neurônios da camada seguinte combinam um subconjunto das regiões convexas em regiões de formato arbitrário.
+
+27. Como é representado um objeto no treinamento de uma RNA?
+Um objeto no treinamento de um RNA é representado com um vetor de respostas desejadas para cada objeto de entrada tem o valor 1 na posição associada a classe do objeto e 0 nas demais posições.
+
+28. Como é definido o erro ocorrido na classificação de um objeto?
+O erro cometido na classificação de um objeto é definido pela comparação entre o vetor de saída dos neurônios da camada de saída e o vetor de valores desejados para essas saídas.
+
+
+29. Como se pode identificar uma classificação correta e equivocada de um objeto? Quando uma rede não é capaz de classificar um objeto?
+Uma classificação correta de um objeto é pode ser identificada quando o valor de saída mais elevado produzido pela rede é aquele gerado pelo neurônio de saída que corresponde a classe correta do objeto. A classificação equivocada pode ser detectada quando o neurônio de uma outra classe é o que produz o valor de saída mais elevado. Quando nenhum neurônio produz um valor elevado ou o valor elevado é produzido por mais de um neurônio, a rede não é capaz de classificar um objeto.
+
+30. O que é o algoritmo back-propagation? Em que ele se baseia?
+O algoritmo back-propagation se baseia na regra delta utilizada na rede adaline, sendo conhecido também como regra delta generalizada. 
+
+O algoritmo é feito pela iteração de duas fases: uma fase para a frente (forward) e uma fase para trás (backward).
+
+31. Descreva o funcionamento das fases do algoritmo back-propagation.
+Na fase forward, cada objeto de entrada é apresentado à rede. Cada neurônio vai utilizando função de ativação e produz saísa até que os neurônios da camada de saída produzam cada um seu valor de saída, que é então comparado ao valor desejado para a saída desse neurônio.
+
+O erro é calculado pela diferença entre os valores de saída produzidos e desejados para cada neurônio. O valor do erro de cada neurônio da camada de saída é então utilizado na fase backward para ajustar seus pesos de entrada. O ajuste prossegue da camada de saída até a primeira camada intermediária.
+
+
+32. Por quê os erros das camadas intermediárias precisam ser estimados? Como o algoritmo back-propagation propõe que esta estimativa seja feita?
+Os erros das camadas intermediárias precisam ser estimados, pois os valores dos erros são conhecidos apenas para os neurônios da camada de saída. O erro de um neurônio de uma camada intermediária é estimado como a soma dos erros dos neurônios da camada seguinte, cujos terminais de entrada estão conectados a ele, ponderados pelo valor do peso associado a essas conexões.
+
+33. Descreva em detalhes os principais passos do algoritmo back-propagation.
+O algoritmo back-propagation é feito pela iteração de duas fases: uma fase para a frente (forward) e uma fase para trás (backward). O forward é um feed forward normal e a fase para trás estima os erros e isso é feito até que o erro seja menor que um limiar.
+
+34. Discuta como definir uma taxa de aprendizado adequada para um RNA.
+A definição de uma taxa de aprendizado adequada para um RNA influencia diretamente no tempo necessário a convergência da rede. Se a taxa de aprendizado for muito pequena, muitos ciclos podem ser necessários para induzir um bom modelo. Por outro lado, a escolha de uma taxa elevada pode provocar oscilações que dificultam a convergência.
+
+35. O que é um momentum e qual o efeito de seu uso no treinamento de uma RNA?
+O Momentum (alpha) quantifica o grau de importância da variação de peso do ciclo anterior ao ciclo atual.
+
+36. Por quê, normalmente, se separa os dados em conjunto de treino e de validação? Como é usado o conjunto de validação?
+Se separa os dados em conjunto de treino e validação normalmente para reduzir a ocorrência de overfitting. O conjunto de validação é apresentados a rede a cada n ciclos, para avaliar a taxa de erro.
+
+37. Como se pode identificar se uma rede parou de aprender, durante o processo de treinamento?
+Durante o processo de treinamento, pode se identicar se uma rede parou de aprender utilizando critériose de parada, por exemplo, um número máximo de ciclos ou uma taxa máxima de erro.
+
+38. Qual a principal crítica que tem sido feita ao algoritmo back-propagation?
+A principal crítica que tem sido feita ao algoritmo back-propagation é sua lentidão na convergência para um bom conjunto de pesos e a sua queda de desempenho quando utilizado em grandes conjuntos de dados e problemas complexos, pois diferentemente das redes perceptron, não existe um teorema de convergência para algoritmos de aprendizado, correndo o risco de ficar preso em um mínimo local
+
+
+39. O que determina o número de neurônios em uma camada intermediária de uma RNA?
+O número adequado de neurônios em uma camada intermediária de uma RNA é determinado por fatores como:
+- Número de exemplos de treinamento;
+- Quantidade de ruido presente nos exemplos;
+- Complexidade da função a ser aprendida;
+- Distribuição estatística dos dados de treinamento.
+
+
+40. Como é escolhida a arquitetura mais promissora para uma RNA, a partir de um conjunto de dados?
+A arquitetura mais promissora para um conjunto de dados é escolhida geralmente em um processo de tentativa e erro, quando diferentes configurações são avaliadas antes de escolher uma delas.
+
+41. Descreva as seguintes abordagens para a seleção de uma RNA:
+- Empírica
+Diversas arquiteturas são testadas até que se encontre uma RNA que produza melhor resultados.
+
+- Meta-heurística
+Combina as características das RNAs que apresentam melhores resultados, gerando assim um novo conjunto de RNAs, formando portanto, meta-heurísticas. São utilizados geralmente algoritmos genéticos.
+
+- Poda
+Utiliza-se um algoritmo de poda durante ou após o treino.
+
+- Construtiva
+A partir de um RNA sem conexões intermediárias, gradualmente insere os neurônios.

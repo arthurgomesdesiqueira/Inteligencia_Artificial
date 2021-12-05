@@ -1,0 +1,344 @@
+1) Uma heurística é uma técnica projetada para resolver um problema mais rapidamente quando os métodos clássicos são muito lentos ou para encontrar uma solução aproximada quando os métodos clássicos não conseguem encontrar uma solução exata.
+
+2) Algoritmo de busca heuristica são técnicas de Inteligência Artificial aplicadas a problemas de alta complexidade teórica que não são resolvidos com técnicas de programação convencionais, principalmente as de natureza puramente numérica.
+
+3) Uma heurística h(n) é admissível se para cada nó n, h(n) ≤ h*(n), onde h * (n) é o custo verdadeiro de alcançar o estado objetivo a partir de n. Uma heurística admissível nunca superestima o custo de alcançar o objetivo, isto é, ela é otimista.
+
+4) Uma heurística é consistente (ou monotônica) se para cada nó n, cada sucessor n de n gerado por qualquer ação a.
+
+5) Busca de Melhor Escolha é um método de busca que procura otimizar a solução, considerando todas as informações disponíveis até aquele instante, não apenas as da última expansão.
+
+6)
+
+Busca gulosa de melhor escolha
+
+Idéia: usar uma função de avaliação f(n) para cada nó.
+– estimativa do quanto aquele nó é desejável
+-> Expandir nó mais desejável que ainda não foi expandido
+Implementação: Ordenar nós na borda em ordem decrescente de acordo com a função de avaliação
+
+Função de avaliação f(n) = h(n) (heurística) = estimativa do custo de n até o objetivo
+Busca gulosa pela melhor escolha expande o nó que parece mais próximo ao objetivo de acordo com a função heurística
+
+Completa: Não, pois pode ficar presa em loops,
+Tempo: O(b^m) no pior caso, mas uma boa função heurística pode levar a uma redução substancial
+Espaço: O(b^m) – mantém todos os nós na memória
+Ótima: Não é ótima, pois segue o melhor passo considerando somente o estado atual.
+
+Busca A*
+
+Idéia: evitar expandir caminhos que já são caros
+Função de avaliação f(n) = g(n) + h(n)
+– g(n) = custo até o momento para alcançar n
+– h(n) = custo estimado de n até o objetivo
+– f(n) = custo total estimado do caminho através de n até o objetivo.
+
+Completa: Sim (a não ser que exista uma quantidade infinita de nós com f ≤ f(G))
+Tempo: Exponencial no pior caso
+Espaço: Mantém todos os nós na memória
+Ótima: Sim e consegue ser provada com heuristica admissivel e consistente
+
+Busca de aprofundamento iterativo A* (IDA*)
+
+Ideia: 
+- Estratégia geral usada com frequência em conjunto com busca em profundidade
+- Encontra o melhor limite de profundidade
+
+Completa: Sim, quando fator de ramificação é finito
+Tempo: Complexidade de tempo O(b^d)
+Espaço: O(bd)
+Ótima: Sim, quando custo de caminho cresce com a profundidade do nó
+
+Busca recursiva de melhor(RBFS)
+
+Ideia: Semelhante à busca recursiva em profundidade, com a diferença de que não desce indefinidamente na exploração, havendo um controle da recursão pelo valor de f(n), e se existir algum nó em um dos ancestrais que ofereça melhor estimativa que o nó atual, a recursão retrocede e busca continua no caminho alternativo
+
+Completa: Sim, quando a heurística é admissível 
+Tempo: tempo difícil de se estimar
+Espaço: O(bd)
+Ótima: Sim, quando a heurística é admissível
+
+Busca SMA*
+
+Ideia: O SMA utiliza toda a memória disponível, e quando a memória está cheia, ele elimina o pior nó folha(maior  custo  de  f(n)) para continuar a busca. O desempenho da busca deve está condicionado à qualidade da função heurística, que de ve ser admissível e ter alta precisão(qualidade da distância do nó corrente ao nó objetivo)
+
+
+Completa: Sim, quando a memória alocada é suficiente
+Tempo: f(n)
+Espaço: memoria suficiente
+Ótima: Sim, quando a memória alocada é suficiente
+
+
+7)
+
+Busca gulosa de melhor escolha
+
+Legenda:
+a = 100
+b = 200
+c = 150
+d = 250
+e = 220
+f = 120
+
+
+     ->a
+     /   \
+    b     c
+   /     / \
+  d     f   e
+
+       a
+     /   \
+    b   ->c
+   /     / \
+  d     f   e
+
+       a
+     /   \
+    b     c
+   /     / \
+  d   ->f   e
+
+
+
+Busca A*
+
+Legenda:
+f(n) = g(n) + h(n)
+a = 100 -> 100 = 0 + 100
+b = 300 -> 300 = 100 + 200
+c = 174 -> 174 = 24 + 150
+d = 284 -> 284 = 34 + 250
+e = 316 -> 316 = 96 + 220
+f = 350 -> 350 = 230 + 120
+
+
+     ->a
+     /   \
+    b     c
+   /     / \
+  d     f   e
+
+       a
+     /   \
+    b   ->c
+   /     / \
+  d     f   e
+
+       a
+     /   \
+    b     c
+   /     / \
+  d     f ->e
+
+
+
+Busca de aprofundamento iterativo A* (IDA*)
+
+Legenda:
+f(a) = 6
+f(b) = 7
+f(c) = 9
+f(d) = 8
+
+min limite entre os nos 
+
+       a
+
+Limite a = 6 
+Limitemax = 6
+
+
+       a
+     /
+    b
+
+Limite b = 7 > Limitemax
+Limitemax = 6
+
+       a
+     /   \
+    b     c
+
+Limite c = 9 > Limitemax
+Limitemax = 6
+
+Limitemax = min(Limite c, Limite b)
+
+       a
+
+Limite a = 6
+Limitemax = 7
+
+
+       a
+     /
+    b
+
+Limite b = 7
+Limitemax = 7
+
+       a
+     /
+    b    
+   /
+  d
+
+Limite d = 8 > Limitemax
+Limitemax = 6
+
+       a
+     /   \
+    b     c
+   /
+  d
+
+Limite c = 9  > Limitemax
+Limitemax = 6
+
+Limitemax = min(Limite c, Limite b)
+
+       a
+
+Limite a = 6
+Limitemax = 8
+
+       a
+     / 
+    b
+
+Limite b = 7
+Limitemax = 8
+
+       a
+     /
+    b
+   /
+  d
+
+Limite d = 8
+Limitemax = 8
+
+
+Resp: 
+       a
+     /
+    b
+   /
+->d
+
+Limitemax = 8
+
+
+
+Busca recursiva de melhor(RBFS)
+
+Legenda:
+f(a) = 6
+f(b) = 7
+f(c) = 9
+f(d) = 8
+
+min limite entre os nos 
+
+       a
+      / \
+     b   c
+
+Limitemax(limite b, limite c) = 9
+
+
+       a
+      / \
+     b   c
+    /
+   d  
+
+Limitemax = 9
+
+Resp: 
+       a
+     /  \
+    b    c
+   /
+->d
+
+Limitemax = 9
+
+
+Busca SMA*
+
+Legenda:
+a = 12 -> 12 = 0 + 12
+b = 15 -> 15 = 10 + 5
+c = 25 -> 25 = 20 + 5
+d = 20 -> 20 = 20 + 0
+g = 13 -> 13 = 8 + 5
+i = 18 -> 18 = 16 + 2
+h = 24 -> 24 = 24 + 0
+
+
+       a 12
+
+
+       a 12
+     /
+    b 15    
+
+
+       a 13
+     /   \
+    b 15  g 13
+
+
+        a 13(15)
+         \
+         g 13
+  		/
+  	   h 18 -> inf
+
+
+        a 15(15)
+         \
+         g 24(inf)
+  		  \
+  		   i 24
+
+
+       a 15
+     /   \
+    b 15  g 24
+
+
+       a 15(24)
+     /   
+    b 15      
+   /
+  c 25 -> inf
+
+
+       a 20(24)
+     /   
+    b 20(inf)      
+     \
+      d 20
+
+
+
+8) Fator de ramificação efetiva busca a qualidade da função heurística e mede-se empiricamente a qualidade de h a partir do conjunto de valores experimentais de N e d.
+
+Se o número total de nós gerados por A* para um problema particular for N e a solução da profundidade for d, então b* é o fator de ramificação que uma árvore uniforme de profundidade d teria de ter a fim de conter N + 1 nós. Assim,
+
+N + 1 = 1 + b* + (b*)2 + ... + (b*)d
+
+Por exemplo, se A* encontra uma solução à profundidade 5 utilizando 52 nós, então o fator de ramificação efetivo é 1,92.
+
+9) A expressão heurística dominada é utilizada no sentido da decisão multi-critério, a heurística X domina Y se e só se f(X[i]) >= f(Y[i]), para todo i e existe um i que f(X[i]) > f(Y[i]) sendo i um determinado exemplo de problema. A heurística X diz-se não dominada por Y, se não existir qualquer heurística Y que domine X. Por fim, duas heurísticas não são comparáveis se não se verificar a dominância de X por Y nem de Y por X.
+
+10) Para gerar uma heuristicas alguns passos devem ser seguidos:
+1 - A solução de uma simplificação de um problema (problema relaxado) é uma heurística para o problema original.
+2 - Usar o custo da solução de um subproblema do problema original
+3 - Banco de dados de padrões: Armazenar o custo exato das soluções de muitos subproblemas. Para um determinado estado procurar o subproblema referentes àquele estado.
+
+11) Sim, a ideia da heuristica é que ela seja automatica mesmo, podendo aperfeiçoar e otimizar seus problemas, a partir da observação da execução do sistema durante o processo de aprendizagem. O lado negativo, é que é um processo geralmente aplicado de forma automática, inconsciente e, portanto, sujeito a inúmeros vieses e padronização de erros. Um exemplo de atalho mental aplicado dessa forma é o julgamento de um indivíduo com base no estereótipo do grupo ao qual pertence, o que em geral resulta em erros sistemáticos.

@@ -1,0 +1,51 @@
+Nome: Arthur Gomes de Siqueira
+
+
+
+1) Um algoritmo pode ser visto como uma ferramenta para resolver um problema computacional bem especificado.
+
+2) Nem sempre é possível criar uma especificação passo a passo para resolver um problema, quando o padrão para a solução não é explícito. Por exemplo, definir a imagem de animais como cachorro e gato, como definir uma imagem real de forma objetiva, lógica e matematicamente.
+
+3) A base do IA é muito na coleta de dados e informações, com isso, a IA consegue criar padrões especificos para problemas complexos como humanos fazem hoje e resolve-los da melhor forma possível.
+
+4) Induzir uma hipotese é o princípio no qual são obtidas conclusões genéricas a partir de um conjunto particular de exemplos.
+
+5) As principais atividades são o aprendizado supervisionado, o aprendizado não supervisionado e o aprendizado reforçado
+
+6) O aprendizado de máquina é um método de análise de dados que automatiza a construção de modelos analíticos. É um ramo da inteligência artificial baseado na ideia de que sistemas podem aprender com dados, identificar padrões e tomar decisões com o mínimo de intervenção humana.
+
+7) As areas são games, softwares e programas operacionais, finanças, segurança, carros autômomos
+
+8) Dados imperfeitos são dados que se diferenciam drasticamente de todos os outros, são pontos fora da curva normal e “capaz de lidar com dados imperfeitos” significa identificar que esses dados estão incorretos e lidar com eles, por exemplo, se numa tabela a idade da pessoa está com 340, sabemos que isso logicamente é impossivel então podemos desconsiderar o valor.
+
+9) Essa propriedade denominada de capacidade de generalização da hipótese acontece quando uma vez induzida uma hipótese, é desejável que ela também seja válida para outros objetos do mesmo problema. 
+
+10) Overfitting é o oposto. O termo vem da tradução de sobre-ajustado. É quando o modelo aprende demais sobre os dados. Neste caso, o modelo mostra-se adequado apenas para os dados de treino, como se o modelo tivesse apenas decorado os dados de treino e não fosse capaz de generalizar para outros dados nunca vistos antes. Quando isso acontece, os dados de treino apresentam resultados excelentes, enquanto que a performance do modelo cai drasticamente com os dados de teste.
+
+11) Underfitting é uma tradução para o inglês de sub-ajustado. Ou seja, nosso modelo não conseguiu aprender suficiente sobre os dados. O underfitting leva à um erro elevado tanto nos dados de treino quando nos dados de teste.
+
+12) O algoritmo de aprendizado recebe um conjunto de exemplos de treinamento para os quais os rótulos da classe associada são conhecidos. O objetivo do algoritmo de aprendizado é construir um classificador que possa determinar corretamente a classe de novos exemplos ainda não rotulados.
+
+13) O viés do algoritmo é um termo utilizado para descrever como podemos estar sendo influenciados por recomendações com base em nossos dados pessoais na internet. O viés de preferência define o espaço de busca ou de hipóteses, faz a restrição das hipóteses que podem ser geradas. O viés de busca de um algoritmo é a forma como o algoritmo busca a hipótese que melhor se ajusta aos dados de treinamento.
+
+14) 
+
+15) O modelo é a forma estruturada que possibilita a compreensão de tudo àquilo que é descoberto e produzido em qualquer parte do mundo. A hipotese é um conjunto estruturado de argumentos e explicações que possivelmente justificam dados e informações, mas, que ainda não foram confirmados por observação ou experimentação.
+
+16) A meta em uma tarefa de previsão é prever um rótulo ou uma resposta a partir de uma entrada.
+
+17) O aprendizado supervisionado é baseado na regressão básica e classificação. O humano fornece um banco de dados e ensina a máquina a reconhecer o que é uma bicicleta, por exemplo, entre padrões e semelhanças. A cor e tamanho pode variar, mas a máquina aprende que uma bicicleta possui pedais, duas rodas, guidão e outros elementos-chave.
+
+18) Uma tarefa de descrição com meta de arranjar os dados, agrupando-os ou associando-os por exemplo.
+
+19) O aprendizado não supervisionado é a forma menos utilizada pelas empresas. Isso porque a máquina começa a analisar, sozinha, os dados e a identificar os padrões — aprendendo a separar o que é uma lata de uma garrafa, por exemplo. Como é a máquina aprendendo por si só conceitos que nunca viu antes, o processo é mais demorado e, portanto, não tão popular.
+
+20) A hierarquia de aprendizado, possui primeiramente o aprendizado indutivo que é aprender/perceber padrões de dados a partir de padrões de dados anteriores. Esse aprendizado indutivo é dividido em dois: aprendizado supervisionado (preditivo) e não-supervisionado (descritivo). A primeira se aprende os rótulos dos dados, os quais podem serem discretos (classificação) ou contínuos (regressão). A segunda se arranja os dados, realizando agrupamento por similaridade ou  sumarização (extrair os dados principais) ou associação, encontrar relações entre os atributos de um conjunto de dados.
+
+21) O aprendizado por reforço é o ensinamento com base na experiência, em que a máquina deve lidar com o que errou antes e procurar a abordagem correta.
+
+
+
+
+
+
